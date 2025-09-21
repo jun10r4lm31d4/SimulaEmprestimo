@@ -20,7 +20,7 @@ namespace SimulaEmprestimo.Api.Controllers
         /// <response code="200">Dados dos produtos cadastrados</response>
         /// <response code="400">Requisição inválida</response>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Produto>>> ListaProdutos()
+        public async Task<ActionResult<List<Produto>>> ListaProdutos()
         {
             return await _contexto.Produtos.ToListAsync();
         }
@@ -87,13 +87,18 @@ namespace SimulaEmprestimo.Api.Controllers
 
             try
             {
-                await _contexto.Produtos
-                .Where(p => p.Id == id)
-                .ExecuteUpdateAsync(p => p
-                    .SetProperty(p => p.Nome, produto.Nome)
-                    .SetProperty(p => p.TaxaJurosAnual, produto.TaxaJurosAnual)
-                    .SetProperty(p => p.PrazoMaximoMeses, produto.PrazoMaximoMeses)
-                );
+                var produtoExistente = await _contexto.Produtos.FindAsync(id);
+                if (produtoExistente == null)
+                {
+                    return NotFound("Produto não encontrado");
+                }
+
+                produtoExistente.Nome = produto.Nome;
+                produtoExistente.TaxaJurosAnual = produto.TaxaJurosAnual;
+                produtoExistente.PrazoMaximoMeses = produto.PrazoMaximoMeses;
+
+                _contexto.Produtos.Update(produtoExistente);
+                await _contexto.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
