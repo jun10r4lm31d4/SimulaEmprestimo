@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulaEmprestimo.Api", "SimulaEmprestimo.Api\SimulaEmprestimo.Api.csproj", "{5ACBB769-F191-4AEA-B490-81A69A027B9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulaEmprestimo.Testes", "SimulaEmprestimo.Testes\SimulaEmprestimo.Testes.csproj", "{B7E3DC86-2592-4B74-8440-248654C0C093}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5ACBB769-F191-4AEA-B490-81A69A027B9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ACBB769-F191-4AEA-B490-81A69A027B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ACBB769-F191-4AEA-B490-81A69A027B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ACBB769-F191-4AEA-B490-81A69A027B9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB7634C3-3AE4-4E54-B7A4-5ADF267E7CB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB7634C3-3AE4-4E54-B7A4-5ADF267E7CB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB7634C3-3AE4-4E54-B7A4-5ADF267E7CB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB7634C3-3AE4-4E54-B7A4-5ADF267E7CB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7E3DC86-2592-4B74-8440-248654C0C093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7E3DC86-2592-4B74-8440-248654C0C093}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7E3DC86-2592-4B74-8440-248654C0C093}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7E3DC86-2592-4B74-8440-248654C0C093}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
